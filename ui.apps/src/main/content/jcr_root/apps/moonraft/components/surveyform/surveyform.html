@@ -1,0 +1,28 @@
+
+
+
+<sly data-sly-use.surveyForm="com.moonraft.aem.cloud.connector.core.models.SurveyFormModel"/>
+<script>var internal_error ='${"internalError" @i18n, context="scriptString"}';
+   var base_url = '/jcr:content.gConnect.json';
+</script>
+<div id="surveyContainer"></div>
+
+<!-- <div id='g-recaptcha'></div> <div class='form-group g-recaptcha' data-callback='verifyCaptcha' data-sitekey='6Ld437ElAAAAAGBvg-rUCct4aosNqalwUv8miPc0'></div> -->
+
+
+<script src="https://unpkg.com/jquery"></script>
+
+<link href="https://unpkg.com/survey-jquery@1.9.84/defaultV2.css" type="text/css" rel="stylesheet"/>
+<script src="https://unpkg.com/survey-jquery@1.9.84/survey.jquery.min.js"></script>
+
+
+<!-- Captcha Section -->
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>var resource_path = '${ surveyForm.currentResource @ context="scriptString"}';
+		var surveyJson = '${ properties.surveyJson @ context="scriptString"}';
+		var siteKey = '${ properties.siteKey @ context="scriptString"}';
+</script>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.all @ categories=['moonraft.surveyForm']}"/>
+

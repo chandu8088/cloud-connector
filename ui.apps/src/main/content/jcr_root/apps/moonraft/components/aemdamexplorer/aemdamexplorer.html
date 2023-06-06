@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <h1>AEM Dam Explorer</h1>
+    <div class="searchContainer">
+      <input
+        id="searchBar-${123}"
+        type="text"
+        name="fulltext"
+        placeholder="Enter text"
+      />
+
+      <button
+        id="searchButton-${123}"
+        value="${123}"
+        onclick="onSearch(this.value)"
+      >
+        Search
+      </button>
+    </div>
+    <div id="breadcrum-${123}"></div>
+    <table
+      border="1"
+      frame="void"
+      rules="rows"
+      id="connectors-${123}"
+      class="tableData"
+    ></table>
+
+    <div id="loader-${123}" class="overlay">
+      <div class="loader"></div>
+    </div>
+
+    <div class="noData" id="noData-${123}"></div>
+    <div class="valueError" id="valueError-${123}"></div>
+    <div class="nextButton" id="connector-${123}"></div>
+
+    <!--  -->
+    <script>
+      var rootPath = '${ properties.rootPath @ context="scriptString"}';
+      var base_folderId = "123";
+      var pageSize = '${ properties.pageSize @ context="scriptString"}';
+	  var currentResource = '${ resource.path @ context="scriptString"}';
+	  var base_Url = "/jcr:content.search.json";
+    </script>
+
+    <sly
+      data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+      data-sly-call="${clientlib.all @ categories=['moonraft.AEMDamExplorer']}"
+    />
+    <script>
+      init(base_folderId);
+    </script>
+  </body>
+</html>

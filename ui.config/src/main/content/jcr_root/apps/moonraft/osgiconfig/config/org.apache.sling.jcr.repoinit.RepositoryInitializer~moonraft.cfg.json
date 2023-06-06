@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/moonraft",
+        "create path (nt:unstructured) /content/dam/moonraft/jcr:content",
+        "set properties on /content/dam/moonraft/jcr:content\n  set cq:conf{String} to /conf/moonraft\n  set jcr:title{String} to \"Cloud Connector\"\nend"
+    ]
+}

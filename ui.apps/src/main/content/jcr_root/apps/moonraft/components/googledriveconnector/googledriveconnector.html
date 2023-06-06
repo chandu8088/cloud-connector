@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <sly
+      data-sly-use.googleDrive="com.moonraft.aem.cloud.connector.core.models.GoogleDriveModel"
+    />
+    <div class="searchContainer">
+      <input
+        id="searchBar-${properties.folderId}"
+        type="text"
+        name="fulltext"
+        placeholder="Enter text"
+      />
+
+      <button
+        id="searchButton-${properties.folderId}"
+        value="${properties.folderId}"
+        onclick="onSearch(this.value)"
+      >
+        Search
+      </button>
+    </div>
+    <div id="breadcrum-${properties.folderId}"></div>
+    <table
+      border="1"
+      frame="void"
+      rules="rows"
+      id="connectors-${properties.folderId}"
+      class="tableData"
+    ></table>
+
+    <div id="loader-${properties.folderId}" class="overlay">
+      <div class="loader"></div>
+    </div>
+
+    <div class="noData" id="noData-${properties.folderId}"></div>
+    <div class="valueError" id="valueError-${properties.folderId}"></div>
+    <div class="nextButton" id="connector-${properties.folderId}"></div>
+    <script>
+      var internal_error = '${"internalError" @i18n, context="scriptString"}';
+      var value_error = '${"valueError" @i18n, context="scriptString"}';
+      var no_content = '${"noContent" @i18n, context="scriptString"}';
+      var base_url = "/jcr:content.gConnect.json";
+      var base_folderId = '${ googleDrive.folderId @ context="scriptString"}';
+    </script>
+
+    <sly
+      data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+      data-sly-call="${clientlib.all @ categories=['moonraft.googleDriveConnector']}"
+    />
+
+    <script>
+      init(base_folderId);
+    </script>
+  </body>
+</html>

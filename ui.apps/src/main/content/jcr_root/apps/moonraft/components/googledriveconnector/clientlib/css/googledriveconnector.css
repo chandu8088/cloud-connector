@@ -1,0 +1,124 @@
+
+//== Base
+
+html,
+body {
+    margin: 0;
+    font-size:   $font-size;
+    font-family: $font-family;
+    line-height: $font-height;
+    color:       $color-foreground;
+    background:  $color-background;
+
+    @media (prefers-color-scheme: dark) {
+        color:       $color-foreground-dark;
+        background:  $color-background-dark;
+    }
+}
+
+
+a {
+    color: $color-link;
+
+    @media (prefers-color-scheme: dark) {
+        color: $color-link-dark;
+    }
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font: inherit;
+}
+.clasb{
+    // background: lightblue;
+    // width: fit-content;
+    // border: double;
+}
+.tableData{
+    width: 100%;
+}
+
+th{
+    text-align: left;
+    vertical-align: middle;
+}
+
+.link{
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+    .link:active {
+  border-style: outset;
+}
+
+.nextButton{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.searchContainer{
+	display: flex;
+    flex-direction: row;
+	justify-content: flex-end;
+}
+
+.breadcrum{
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  /*color: #069;*/
+  /*text-decoration: underline;*/
+  cursor: pointer;
+}
+.noData{
+	display: flex;
+    justify-content: center;
+}
+.valueError{
+	display: flex;
+    justify-content: center;
+    color: red;
+}
+.loader {
+  border: 3px solid #f3f3f3; /* Light grey */
+  border-top: 3px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.overlay{
+
+position: fixed; /* Sit on top of the page content */
+  display: flex; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 150px;
+}

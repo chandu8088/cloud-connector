@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Static Frontend file</title>
+    <meta name="template" content="page-content" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="/etc.clientlibs/moonraft/clientlibs/clientlib-base.css"
+      type="text/css"
+    />
+    <script
+      type="text/javascript"
+      src="/etc.clientlibs/moonraft/clientlibs/clientlib-dependencies.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="/etc.clientlibs/moonraft/clientlibs/clientlib-dependencies.css"
+      type="text/css"
+    />
+    <!-- Testing serveyjs -->
+    <script src="https://unpkg.com/jquery"></script>
+
+<link href="https://unpkg.com/survey-jquery@1.9.84/defaultV2.css" type="text/css" rel="stylesheet"/>
+<script src="https://unpkg.com/survey-jquery@1.9.84/survey.jquery.min.js"></script>
+  </head>
+  <body class="page basicpage">
+    <div class="root container responsivegrid">
+      <div class="cmp-container">
+        <header class="experiencefragment">
+          <div class="cmp-experiencefragment">
+            <div class="cmp-container">
+              <div class="navigation">
+                <nav
+                  class="cmp-navigation"
+                  role="navigation"
+                  itemscope
+                  itemtype="http://schema.org/SiteNavigationElement"
+                >
+                <button id="goBack" onclick="goBack()">Go Back</button>
+                  <ul class="cmp-navigation__group">
+                    <li
+                      class="cmp-navigation__item cmp-navigation__item--level-0 cmp-navigation__item--active"
+                    >
+                      <a
+                        href="/content/moonraft/us/en.html"
+                        title="Cloud Connector"
+                        aria-current="page"
+                        class="cmp-navigation__item-link"
+                        >Cloud Connector</a
+                      >
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="languagenavigation">
+                <nav class="cmp-languagenavigation">
+                  <ul class="cmp-languagenavigation__group">
+                    <li
+                      class="cmp-languagenavigation__item cmp-languagenavigation__item--langcode-en cmp-languagenavigation__item--level-0"
+                    >
+                      <span class="cmp-languagenavigation__item-title" lang="en"
+                        >United States</span
+                      >
+                      <ul class="cmp-languagenavigation__group">
+                        <li
+                          class="cmp-languagenavigation__item cmp-languagenavigation__item--langcode-en cmp-languagenavigation__item--level-1"
+                        >
+                          <a
+                            class="cmp-languagenavigation__item-link"
+                            href="/content/moonraft/us/en.html"
+                            hreflang="en"
+                            lang="en"
+                            rel="alternate"
+                            title="English"
+                            >English</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="search">
+                <section
+                  class="cmp-search"
+                  role="search"
+                  data-cmp-is="search"
+                  data-cmp-min-length="3"
+                  data-cmp-results-size="10"
+                >
+                <div class="cmp-search__field">
+                  <i
+                    class="cmp-search__icon"
+                    data-cmp-hook-search="icon"
+                  ></i>
+                  <span
+                    class="cmp-search__loading-indicator"
+                    data-cmp-hook-search="loadingIndicator"
+                  ></span>
+                  <input
+                    id="searchBar"
+                    class="cmp-search__input"
+                    data-cmp-hook-search="input"
+                    type="text"
+                    name="fulltext"
+                    placeholder="Enter text"
+                    role="combobox"
+                    aria-autocomplete="list"
+                    aria-haspopup="true"
+                    aria-invalid="false"
+                  />
+                  <button
+                    onclick="onSearch()"
+                  >
+                    Search
+                  </button>
+                </div>
+                  <div
+                    class="cmp-search__results"
+                    data-cmp-hook-search="results"
+                    role="listbox"
+                    aria-multiselectable="false"
+                  ></div>
+                  <script data-cmp-hook-search="itemTemplate" type="x-template">
+                    <a class="cmp-search__item" data-cmp-hook-search="item">
+                        <span class="cmp-search__item-title" data-cmp-hook-search="itemTitle"></span>
+                    </a>
+                  </script>
+                </section>
+              </div>
+            </div>
+          </div>
+        </header>
+        
+    <table border="1" frame="void" rules="rows" id="connectors" class="tableData">
+      
+    </table>
+    <div id="connector"></div>
+    <script  src="test1.js">
+    
+    </script>
+
+
+<!-- Testing serveyjs -->
+<div id="surveyContainer"></div>
+
+  </body>
+</html>

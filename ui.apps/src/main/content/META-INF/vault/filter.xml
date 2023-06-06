@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/moonraft/clientlibs"/>
+    <filter root="/apps/moonraft/components"/>
+    <filter root="/apps/moonraft/i18n"/>
+<!--    <filter root="/apps/moonraft/vendor"/>-->
+</workspaceFilter>

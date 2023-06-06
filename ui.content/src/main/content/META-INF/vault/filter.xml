@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/moonraft" mode="merge"/>
+    <filter root="/content/moonraft" mode="merge"/>
+    <filter root="/content/dam/moonraft" mode="merge">
+        <exclude pattern="/content/dam/moonraft(/.*)?"/>
+        <include pattern="/content/dam/moonraft/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/moonraft/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/moonraft" mode="merge"/>
+</workspaceFilter>

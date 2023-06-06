@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-05-11T12:20:51.844+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/moonraft/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Google-Drive-connector"
+        sling:resourceType="moonraft/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="moonraft/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="moonraft/components/container"
+                layout="responsiveGrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="moonraft/components/title"/>
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="moonraft/components/container"
+                    layout="responsiveGrid">
+                    <googledriveconnector
+                        jcr:lastModified="{Date}2023-05-11T12:20:31.007+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="moonraft/components/googledriveconnector"
+                        folderId="1of8lrYvhH6t3dm7zBauRW8A8CQE6RqOZ"/>
+                    <googledriveconnector_1961487868
+                        jcr:lastModified="{Date}2023-05-11T12:20:51.840+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="moonraft/components/googledriveconnector"
+                        folderId="17bMyKHW4gxCH2elhSgDx9K7Zg8Hv9XWI"/>
+                </container>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>
